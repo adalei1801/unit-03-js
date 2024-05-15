@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons and JS</title>
+</head>
+<body>
+    <div class="buttonhome">
+        <p>Click the buttons and see what happens</p>
+    </div>
+    <button onclick="simpleChange()">Simple</button>
+    <button onclick="oldChange()">Old</button>
+    <button onclick="crazyChange()">Crazy</button>
+    <button onclick="randomChange()">Random</button>
+    <button onclick="resetStart()">Reset</button>
+
+    <script>
+        function simpleChange() {
+            document.body.style.backgroundColor = 'red'
+            document.body.style.color = 'black'
+            document.body.style.fontFamily = 'FreeMono'
+        }
+
+        function oldChange() {
+            document.body.style.fontFamily = 'Snell Roundhand'
+            document.body.style.backgroundColor = '#FCF5E5'
+            document.body.style.color = 'black'
+        }
+
+        function crazyChange() {
+            document.body.style.color = "purple"
+            document.body.style.backgroundColor = '#00FF00'
+            document.body.style.fontFamily = 'Courier'
+        }
+
+        function randomChange () {
+            document.body.style.color = 'yellow'
+            document.body.style.backgroundColor = getRandomColor()
+            document.body.style.fontFamily = 'Snell Roundhand'
+        }
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+
+        }
+
+
+        function resetStart(){
+            document.body.style.fontFamily = 'Times New Roman'
+            document.body.style.color = 'black'
+            document.body.style.backgroundColor = 'white'
+
+        }
+    </script>
+</body>
+</html>
