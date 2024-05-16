@@ -5,9 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input, button {
+            margin: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button:hover {
+            color: white;
+            background-color: darkgreen;
+            border-color: white;
+        }
+    </style>
 </head>
 <body>
     <h1>MadLibs Redux</h1>
+    <p>This is a madlibs game about a simple outing to a nice place.</p>
     <label>Name:</label>
     <input id="name">
     <br>
@@ -41,6 +57,7 @@
 
         function changeColor() {
             document.body.style.backgroundColor = colorInput.value
+            document.body.style.fontFamily = 'Monospace'
         }
     </script>
 
