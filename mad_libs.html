@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MadLibs Redux</h1>
+    <label>Name:</label>
+    <input id="name">
+    <br>
+    <label>Color:</label>
+    <input id="color">
+    <br>
+    <label>Adjective:</label>
+    <input id="adjective">
+    <br>
+    <label>Animal:</label>
+    <input id="animal">
+    <br>
+    <label>Verb:</label>
+    <input id="verb">
+    <br>
+    <button onclick="printStory(), changeColor()">Read</button>
+    <br>
+    <img src="ClaudeMonetGarden.jpeg" alt="Claude Monet" width="200">
+    <p id="story"></p>
+
+    <script>
+        let nameInput = document.getElementById("name")
+        let colorInput = document.getElementById("color")
+        let adjectiveInput = document.getElementById("adjective")
+        let animalInput = document.getElementById("animal")
+        let verbInput = document.getElementById("verb")
+
+        function printStory() {
+            story.innerHTML = nameInput.value + ' went to a garden and saw many things. Their favorite was the ' + colorInput.value + ' flowers and the ' + adjectiveInput.value + ' bushes. There were also ' + animalInput.value + ' fish in the pond. As they ' + verbInput.value + ' further, they found a field of herbs. After that, they had lunch. Overall, they had a ' + adjectiveInput.value + ' day.'
+        }
+
+        function changeColor() {
+            document.body.style.backgroundColor = colorInput.value
+        }
+    </script>
+
+</body>
+</html>

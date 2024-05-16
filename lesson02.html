@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lesson 02 - User Interactivity</h1>
+    <label>Name</label>
+    <input id="name">
+    <button onclick="clickMe()">Click Me</button>
+    <hr>
+    <h1 id="nameout"></h1>
+    <button onclick="clickMe(), greetMe()">Click Me</button>
+    <button onclick="resetPage()">Reset</button>
+    <br>
+    <br>
+    <script>
+        let nameInput = document.getElementById("name")
+        let nameOutput = document.getElementById("nameout")
+        function clickMe () {
+            console.log(nameInput.value)
+        }
+
+        function greetMe () {
+            nameout.innerHTML = 'Hi, ' + nameInput.value
+        }
+
+        function resetPage () {
+            nameout.innerHTML = ' '
+        }
+
+    </script>
+</body>
+</html>
